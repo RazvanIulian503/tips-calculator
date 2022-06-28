@@ -1,0 +1,387 @@
+// NAVBAR
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container, nav {
+    overflow-x: hidden;
+}
+
+#navbar {
+    background-color: #5463FF;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    #logo {
+        height: 60px;
+        margin-left: 30px;
+        transition: 0.2s;
+        cursor: pointer;
+     
+        &:hover{
+           transform: scale(1.1);
+        }
+    }
+
+    &-links {
+        display: flex;
+        align-items: center;
+
+        h3 {
+            color: #fff;
+            margin-right: 30px;
+        }
+
+        img {
+            width: 65px;
+            height: 65px;
+            margin-right: 30px;
+            cursor: pointer;
+            transition: 0.2s;
+
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+
+
+// MAIN CONTENT
+
+#right-icon {
+    position: absolute;
+    right: 0;
+    top: 65px;
+    z-index: -1;
+}
+
+#header {
+    text-align: center;
+    padding-top: 50px;
+
+    span {
+        color: #5463FF;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 25px;
+        color: #676767;
+        transform: translateY(-10px);
+    }
+}
+
+.calculator {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+    #calculator {
+        border: 4px solid #5463FF;
+        width: 500px;
+        height: 350px;
+        border-radius: 20px;
+
+        h2 {
+            font-size: 30px;
+            padding-top: 15px;
+        }
+
+        #quantity{
+            background-color: #fff;
+            border: solid 2px #2E40FF;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        
+        #percentageInput{
+            background-color: #fff;
+            border: solid 2px #2E40FF;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        form {
+            h2{
+                font-size: 30px;
+            }
+
+            .checkbox {
+                margin-top: 5px;
+                margin-right: 15px;
+            }
+        }
+
+        .button{
+            text-align: center;
+            padding-top: 40px;
+
+            #calcBtn{
+                width: 190px;
+                background-color: #2E40FF;
+                color: #fff;
+                font-weight: 600;
+                border: none;
+                height: 50px;
+                border-radius: 10px;
+                transition: .2s;
+
+                &:hover {
+                    background-color: #0013e0;
+                }
+            }
+        }
+    }
+}
+
+.result{
+    text-align: center;
+    padding-bottom: 50px;
+
+    h2{
+        margin-top: 50px;
+        font-size: 40px;
+        margin-bottom: 50px;
+
+        #span {
+            color: #2E40FF;
+            font-weight: 700;
+        }
+    }
+
+    button {
+        background-color: #fff;
+        border: 3px solid #2E40FF;
+        color: #2E40FF;
+        font-size: 20px;
+        font-weight: 600;
+        width: 100px;
+        height: 40px;
+        border-radius: 5px;
+        transition: 0.2s;
+        display: none;
+   
+        &:hover{
+            cursor: pointer;
+            background-color: #2E40FF;
+            color: #fff;
+        }
+    }
+}
+
+
+// POP UP
+
+.container-pop-up {
+    background-color: rgba(0,0,0, .6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1000000;
+    display: none;
+}
+
+.pop-up {
+    position: fixed;
+    width: 600px;
+    height: 500px;
+    background-color: #fff;
+    border: 4px solid #2E40FF;
+    border-radius: 20px;
+    z-index: 99999999;
+
+    img {
+        width: 200px;
+        position: absolute;
+        top: 0;
+        right: 10px;
+    }
+
+    h1 {
+        margin-top: 40px;
+        font-size: 35px;
+        padding-left: 15px;
+
+        span {
+            color: #2E40FF;
+        }
+    }
+
+    form{
+        margin-left: 20px;
+        margin-top: 40px;
+    }
+
+    label {
+        font-size: 20px;
+        color: #000;
+        margin-top: 10px;
+    }
+
+    input, #user-passions {
+        background-color: #fff;
+        border: solid 2px #2E40FF;
+        border-radius: 5px;
+        margin-top: 5px;
+        padding-left: 10px;
+
+        &::placeholder {
+            color: rgba(0, 0, 0, .8);
+        }
+    }
+
+    .pop-up-footer {
+        text-align: center;
+        margin-top: 60px;
+
+        #loginBtn {
+            background-color: #2E40FF;
+            border: none;
+            font-size: 20px;
+            font-weight: 600;
+            width: 100px;
+            height: 40px;
+            border-radius: 5px;
+            transition: 0.2s;
+            margin-top: 20px;
+            color: #fff;
+   
+            &:hover{
+              cursor: pointer;
+              background-color: #1326f1;
+              color: #fff;
+            }
+        }
+
+        #guestBtn {
+            background-color: transparent;
+            border: 2px solid #2E40FF;
+            font-size: 20px;
+            font-weight: 600;
+            width: 200px;
+            height: 40px;
+            border-radius: 5px;
+            transition: 0.2s;
+            margin-top: 20px;
+
+            a {
+                color: #2E40FF;
+                text-decoration: none;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+   
+            &:hover{
+              background-color: #2E40FF;
+            }
+        }
+    }
+}
+
+
+// USER PROFILE
+
+.user-profile {
+    height: 300px;
+    width: 250px;
+    background-color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 15px;
+    display: none;
+
+    #user-image {
+        margin-top: 10px;
+
+        img {
+            width: 100px;
+            height: 80px;
+        }
+    }
+
+    #user-info {
+        margin-top: 10px;
+
+        &-delete {
+            width: 150px;
+            background-color: transparent;
+            border: 3px solid #2E40FF;
+            color: #2E40FF;
+            font-size: 16px;
+            padding: 5px;
+            border-radius: 5px;
+            transition: .2s;
+
+            &:hover {
+                background-color: #2E40FF;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.user-login {
+    width: 300px;
+    height: 150px;
+    position: fixed;
+    top: 100px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 2px;
+    right: 0;
+    background-color: #fff;
+    display: none;
+
+    h5 {
+        margin-top: 15px;
+        padding: 10px;
+    }
+
+    button {
+        width: 150px;
+        background-color: transparent;
+        border: 3px solid #2E40FF;
+        color: #2E40FF;
+        font-size: 16px;
+        padding: 5px;
+        border-radius: 5px;
+        transition: .2s;
+
+        &:hover {
+            background-color: #2E40FF;
+            color: #fff;
+        }
+    }
+}
+
+
+// MEDIA QUERIES
+
+@media screen and (max-width: 600px){
+    #right-icon {
+        display: none;
+    }
+    .calculator{
+        width: 350px;
+
+        #calculator {
+            width: 350px;
+            height: 400px;
+        } 
+    }   
+}
